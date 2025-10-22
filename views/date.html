@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Today's Date</title>
+</head>
+<body>
+  <h1>Today's Date</h1>
+  <p id="date"></p>
+  <script>
+    // Show the current date dynamically
+    const dateEl = document.getElementById("date");
+    const today = new Date();
+    dateEl.textContent = today.toDateString();
+  </script>
+  <p><a href="/">Go Home</a></p>
+</body>
+</html>

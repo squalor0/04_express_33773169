@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const router = express.Router();
 
-// log each request
+// Log and time each request
 router.use((req, res, next) => {
   const start = Date.now();
   console.log(`[IN ] ${req.method} ${req.originalUrl}`);
@@ -16,7 +16,7 @@ router.use((req, res, next) => {
   next();
 });
 
-// Handle the main routes
+// Handle the main routes with sendFile()
 router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../views/index.html"));
 });

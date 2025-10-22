@@ -6,9 +6,13 @@
 </head>
 <body>
   <h1>Today's Date</h1>
+  <p class="description">
+    This page demonstrates how JavaScript can dynamically display the current date on a web 
+    page.
+    The date shown below is generated directly in your browser using the Date object.
+  </p>
   <p id="date"></p>
   <script>
-    // Show the current date dynamically
     const dateEl = document.getElementById("date");
     const today = new Date();
     dateEl.textContent = today.toDateString();
